@@ -50,7 +50,7 @@ var pages = getEntry('./src/module/**/*.html');
 
 for (var pathname in pages) {
 
-	
+  console.log("pathname:"+pathname)
   // 配置生成的html文件，定义路径等
   var conf = {
     filename: pathname + '.html',
@@ -64,7 +64,7 @@ for (var pathname in pages) {
     conf.chunks = ['vendors', pathname];
     conf.hash = true;
   }
-  
+  console.log("conf:"+JSON.stringify(conf));
   module.exports.plugins.push(new HtmlWebpackPlugin(conf));
 }
 

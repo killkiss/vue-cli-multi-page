@@ -106,6 +106,7 @@ function getEntry(globPath) {
     tmp = entry.split('/').splice(-3);
     pathname = tmp.splice(0, 1) + '/' + basename; // 正确输出js和html的路径
     entries[pathname] = entry;
+    console.log("[key]:%s   [value]:%s",pathname,entry);
   });
   
   return entries;
